@@ -1,0 +1,39 @@
+# RViz Configuration File for Robot Arm and Base
+Panels: []
+Visualization:
+  Name: Robot Visualization
+  Version: 1.12.17
+  Displays:
+    - Name: Robot Model
+      Type: rviz/RobotModel
+      Enabled: true
+      Alpha: 1.0
+      Robot Description: robot_description
+      TF Prefix: ""
+      Force Fixed Frame: true
+      Set Frame: false
+      Keep-Existing-Orientation: false
+
+    - Name: Grid
+      Type: rviz/Grid
+      Enabled: true
+      Cell Size: 1
+      Color: 0.75 0.75 0.75
+      Plane: XY
+      Plane Offset: 0
+      Line Style: Lines
+      Line Width: 0.02
+
+    - Name: TF
+      Type: rviz/TF
+      Enabled: true
+
+    - Name: Axes
+      Type: rviz/Axes
+      Enabled: true
+      Length: 0.1
+      Line Width: 0.01
+
+# Fixed Frame
+Fixed Frame: "world"  # Set to the root frame in the URDF files (e.g., "world" or "base_link")
+
