@@ -1,0 +1,8 @@
+source;share/mobile_manipulator_body/hook/cmake_prefix_path.ps1
+source;share/mobile_manipulator_body/hook/cmake_prefix_path.dsv
+source;share/mobile_manipulator_body/hook/cmake_prefix_path.sh
+source;share/mobile_manipulator_body/local_setup.bash
+source;share/mobile_manipulator_body/local_setup.dsv
+source;share/mobile_manipulator_body/local_setup.ps1
+source;share/mobile_manipulator_body/local_setup.sh
+source;share/mobile_manipulator_body/local_setup.zsh

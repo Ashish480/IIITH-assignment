@@ -1,0 +1,15 @@
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/ament_index/resource_index/package_run_dependencies/mobile_manipulator_body
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/ament_index/resource_index/parent_prefix_path/mobile_manipulator_body
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/environment/ament_prefix_path.sh
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/environment/ament_prefix_path.dsv
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/environment/path.sh
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/environment/path.dsv
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/local_setup.bash
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/local_setup.sh
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/local_setup.zsh
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/local_setup.dsv
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/package.dsv
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/ament_index/resource_index/packages/mobile_manipulator_body
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/cmake/mobile_manipulator_bodyConfig.cmake
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/cmake/mobile_manipulator_bodyConfig-version.cmake
+/home/ashy/iiith_ws/install/mobile_manipulator_body/share/mobile_manipulator_body/package.xml

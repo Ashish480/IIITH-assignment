@@ -1,0 +1,258 @@
+<sdf version='1.7'>
+  <model name='robot_base'>
+    <joint name='arm_base_joint' type='revolute'>
+      <pose relative_to='__model__'>0 0 0.1 0 -0 0</pose>
+      <parent>world</parent>
+      <child>arm_base</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_base'>
+      <pose relative_to='arm_base_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.063005 -0 0 -0 0</pose>
+        <mass>1.6004</mass>
+        <inertia>
+          <ixx>0.00552197</ixx>
+          <ixy>7.95506e-10</ixy>
+          <ixz>-1.34378e-09</ixz>
+          <iyy>0.00352397</iyy>
+          <iyz>-1.10072e-08</iyz>
+          <izz>0.0055374</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_base_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/arm_base.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='arm_base_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/arm_base.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='shoulder_joint' type='revolute'>
+      <pose relative_to='arm_base'>-0.05166 0 0.20271 0 -0 1.5708</pose>
+      <parent>arm_base</parent>
+      <child>bicep</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='bicep'>
+      <pose relative_to='shoulder_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.12821 4e-06 0.052492 0 -0 0</pose>
+        <mass>1.1198</mass>
+        <inertia>
+          <ixx>0.0012474</ixx>
+          <ixy>-5.4004e-07</ixy>
+          <ixz>-0.0013148</ixz>
+          <iyy>0.0072923</iyy>
+          <iyz>-1.8586e-07</iyz>
+          <izz>0.0068178</izz>
+        </inertia>
+      </inertial>
+      <collision name='bicep_collision'>
+        <pose>0 0 0 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/bicep.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='bicep_visual'>
+        <pose>0 0 0 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/bicep.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='bottom_wrist_joint' type='revolute'>
+      <pose relative_to='bicep'>0 -0.05194 0.269 0 -0 0</pose>
+      <parent>bicep</parent>
+      <child>bottom_wrist</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='bottom_wrist'>
+      <pose relative_to='bottom_wrist_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0.069257 -0 0 -0 0</pose>
+        <mass>0.27721</mass>
+        <inertia>
+          <ixx>0.00104291</ixx>
+          <ixy>4.37155e-09</ixy>
+          <ixz>-2.4505e-09</ixz>
+          <iyy>0.000380518</iyy>
+          <iyz>-7.5601e-09</iyz>
+          <izz>0.00106007</izz>
+        </inertia>
+      </inertial>
+      <collision name='bottom_wrist_collision'>
+        <pose>0 0 0.13522 3.14 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/wrist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='bottom_wrist_visual'>
+        <pose>0 0 0.13522 3.14 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/wrist.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='elbow_joint' type='revolute'>
+      <pose relative_to='bottom_wrist'>0 0 0.13522 0 -0 0</pose>
+      <parent>bottom_wrist</parent>
+      <child>elbow</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='elbow'>
+      <pose relative_to='elbow_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.11109 0 0.046469 0 -0 0</pose>
+        <mass>0.84845</mass>
+        <inertia>
+          <ixx>0.00079656</ixx>
+          <ixy>-7.8011e-10</ixy>
+          <ixz>0.00053616</ixz>
+          <iyy>0.003576</iyy>
+          <iyz>4.6326e-10</iyz>
+          <izz>0.0033698</izz>
+        </inertia>
+      </inertial>
+      <collision name='elbow_collision'>
+        <pose>0 0.05163 0.20994 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/elbow.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='elbow_visual'>
+        <pose>0 0.05163 0.20994 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/elbow.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='top_wrist_joint' type='revolute'>
+      <pose relative_to='elbow'>0 0 0.20994 0 -0 0</pose>
+      <parent>elbow</parent>
+      <child>top_wrist</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='top_wrist'>
+      <pose relative_to='top_wrist_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0.069257 -0 0 -0 0</pose>
+        <mass>0.27721</mass>
+        <inertia>
+          <ixx>0.00104291</ixx>
+          <ixy>4.37155e-09</ixy>
+          <ixz>-2.4505e-09</ixz>
+          <iyy>0.000380518</iyy>
+          <iyz>-7.5601e-09</iyz>
+          <izz>0.00106007</izz>
+        </inertia>
+      </inertial>
+      <collision name='top_wrist_collision'>
+        <pose>0 0 0.13522 3.14 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/wrist.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='top_wrist_visual'>
+        <pose>0 0 0.13522 3.14 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mobile_manipulator_body/meshes/wrist.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/</robotNamespace>
+      <controlPeriod>0.001</controlPeriod>
+      <legacyModeNS>0</legacyModeNS>
+    </plugin>
+    <static>0</static>
+    <plugin name='joint_state_publisher' filename='libgazebo_ros_joint_state_publisher.so'>
+      <jointName>arm_base_joint, shoulder_joint, bottom_wrist_joint, elbow_joint, bottom_wrist_joint</jointName>
+    </plugin>
+  </model>
+</sdf>
